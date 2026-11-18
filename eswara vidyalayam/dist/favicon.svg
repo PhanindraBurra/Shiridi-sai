@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="32" cy="32" r="27" fill="#fffdfa" stroke="#e11d48" stroke-width="1" stroke-dasharray="3 2"/>
+  <circle cx="32" cy="18" r="4" fill="#f97316"/>
+  <path d="M22 23 C26 21 38 21 42 23 C37 28 27 28 22 23 Z" fill="#f97316"/>
+  <path d="M32 23 C35 28 35 34 32 38 C29 34 29 28 32 23 Z" fill="#fb923c"/>
+  <path d="M32 38 C26 34 23 28 26 24 C28 29 31 35 32 38 Z" fill="#f43f5e"/>
+  <path d="M32 38 C38 34 41 28 38 24 C36 29 33 35 32 38 Z" fill="#f43f5e"/>
+  <path d="M32 38 C23 38 18 33 20 28 C23 33 28 37 32 38 Z" fill="#be123c"/>
+  <path d="M32 38 C41 38 46 33 44 28 C41 33 36 37 32 38 Z" fill="#be123c"/>
+  <path d="M24 41 C28 39 36 39 40 41 C36 43 28 43 24 41 Z" fill="#10b981"/>
+  <text x="32" y="52" font-family="sans-serif" font-weight="900" font-size="7" fill="#e11d48" text-anchor="middle" letter-spacing="0.5">ESWAR</text>
+  <text x="32" y="58" font-family="sans-serif" font-weight="700" font-size="4.5" fill="#1e1b4b" text-anchor="middle" letter-spacing="0.5">COLLEGE</text>
+</svg>
