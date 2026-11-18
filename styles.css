@@ -388,7 +388,9 @@ button {
   transition: all var(--transition-smooth);
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  white-space: nowrap;
+  white-space: normal; /* Allow wrapping on narrow screens to prevent cut-off */
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .btn-crimson {
@@ -519,23 +521,31 @@ button {
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--crimson);
   margin-bottom: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1.35;
 }
 
 .hero-pill-sparkle {
   color: var(--gold);
+  flex-shrink: 0;
 }
 
 .hero-heading {
   font-family: var(--font-display);
-  font-size: clamp(2.3rem, 4.2vw, 3.6rem);
+  font-size: clamp(1.85rem, 3.8vw, 3.4rem);
   font-weight: 900;
-  line-height: 1.14;
+  line-height: 1.15;
   color: var(--navy-dark);
   letter-spacing: -0.02em;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .hero-heading .highlight-crimson {
@@ -551,6 +561,9 @@ button {
   max-width: 600px;
   margin-bottom: 28px;
   font-weight: 500;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .hero-cta-row {
@@ -1905,6 +1918,14 @@ textarea.form-control {
     padding-top: 100px; /* Offset for frozen header on tablet/mobile */
   }
 
+  /* Container padding on mobile to prevent overflow */
+  .container {
+    padding: 0 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
   /* Topbar stays visible, exactly matching SSVN */
   .topbar {
     padding: 0 14px;
@@ -1968,6 +1989,117 @@ textarea.form-control {
     display: none;
   }
 
+  /* ========================================================================
+     HERO SECTION MOBILE PERFECTION - PREVENT MATTER CUT-OFF
+     ======================================================================== */
+  .hero-section {
+    padding: 30px 0 40px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .hero-pill {
+    font-size: 0.68rem;
+    padding: 6px 12px;
+    letter-spacing: 0.04em;
+    gap: 6px;
+    line-height: 1.35;
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .hero-heading {
+    font-size: clamp(1.6rem, 6.5vw, 2.15rem);
+    line-height: 1.22;
+    margin-bottom: 16px;
+    text-align: center;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .hero-lead {
+    font-size: 0.94rem;
+    line-height: 1.62;
+    margin-bottom: 24px;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 4px;
+    box-sizing: border-box;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 12px;
+    margin-bottom: 28px;
+    align-items: stretch;
+  }
+
+  .hero-cta-row .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    white-space: normal;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 1.3;
+    border-radius: 9999px;
+  }
+
+  .hero-trust-badges {
+    justify-content: center;
+    gap: 8px 14px;
+    width: 100%;
+    padding-top: 14px;
+  }
+
+  .trust-item {
+    font-size: 0.76rem;
+  }
+
+  .hero-composite-frame {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 8px 0;
+  }
+
+  .hero-main-card img {
+    height: 250px;
+  }
+
+  .float-badge-1 {
+    top: -6px;
+    left: 4px;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+
+  .float-badge-2 {
+    bottom: -6px;
+    right: 4px;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.45rem, 5vw, 2rem);
+    line-height: 1.25;
+  }
+
   .about-grid-main {
     grid-template-columns: 1fr;
   }
@@ -1994,6 +2126,10 @@ textarea.form-control {
   }
   body {
     padding-top: 92px; /* Offset for frozen header on mobile */
+  }
+
+  .container {
+    padding: 0 14px;
   }
 
   /* Exact SSVN Mobile Topbar dimensions */
@@ -2048,6 +2184,37 @@ textarea.form-control {
 
   .nav-menu {
     top: 92px;
+  }
+
+  .hero-pill {
+    font-size: 0.64rem;
+    padding: 5px 10px;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-heading {
+    font-size: 1.48rem;
+    line-height: 1.25;
+  }
+
+  .hero-lead {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    padding: 0 2px;
+  }
+
+  .hero-cta-row .btn {
+    padding: 13px 14px;
+    font-size: 0.82rem;
+  }
+
+  .trust-item {
+    font-size: 0.72rem;
+  }
+
+  .portal-card {
+    padding: 24px 16px;
+    border-radius: 20px;
   }
 
   .portal-circle-btn {
