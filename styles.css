@@ -74,7 +74,10 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 130px;
   font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -83,8 +86,16 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  padding-top: 130px; /* Offset for frozen topbar & header */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
 }
 
 img {
@@ -223,24 +234,32 @@ button {
 .insta-stop-three { stop-color: #d62976; }
 
 /* ==========================================================================
-   Header & Navigation (Clean Vertical Spacing, No Congestion, No Extra Address)
+   FROZEN HEADER WRAPPER (Freezes Header & Topbar on Mobile & Desktop Screen)
    ========================================================================== */
-.site-header {
-  position: sticky;
+.site-header-wrapper {
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+  transition: box-shadow var(--transition-fast);
+}
+
+.site-header-wrapper.scrolled {
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.14);
+}
+
+.site-header {
+  position: relative;
   width: 100%;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  z-index: 40;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   transition: all var(--transition-smooth);
-}
-
-.site-header.scrolled {
-  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
 }
 
 .header-inner {
@@ -1370,10 +1389,129 @@ button {
   color: #f1f5f9;
 }
 
-.portal-actions-row {
+/* Circular Action Portal Buttons */
+.portal-circle-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 8px 6px;
+  gap: 12px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.portal-circle-btn {
+  position: relative;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, filter 0.25s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.school-circle-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #92400e 100%);
+  border: 3.5px solid #ffffff;
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(245, 158, 11, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.school-circle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 16px 36px rgba(245, 158, 11, 0.65), 0 0 0 2px rgba(255, 255, 255, 0.6);
+  filter: brightness(1.08);
+}
+
+.college-circle-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 45%, #991b1b 100%);
+  border: 3.5px solid #ffffff;
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(220, 38, 38, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.college-circle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 16px 36px rgba(220, 38, 38, 0.65), 0 0 0 2px rgba(255, 255, 255, 0.6);
+  filter: brightness(1.08);
+}
+
+.portal-circle-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  opacity: 0.45;
+  animation: portalCirclePulse 2.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes portalCirclePulse {
+  0% {
+    transform: scale(0.94);
+    opacity: 0.8;
+  }
+  65% {
+    transform: scale(1.22);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.28);
+    opacity: 0;
+  }
+}
+
+.portal-circle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.circle-btn-sub {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  opacity: 0.95;
+  text-transform: uppercase;
+}
+
+.circle-btn-main {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  margin: 2px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.circle-btn-arrow {
+  font-size: 1.1rem;
+  font-weight: 900;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.portal-circle-btn:hover .circle-btn-arrow {
+  transform: translate(2px, -2px);
+}
+
+.portal-circle-caption {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -1760,6 +1898,13 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: 102px;
+  }
+  body {
+    padding-top: 100px; /* Offset for frozen header on tablet/mobile */
+  }
+
   /* Topbar stays visible, exactly matching SSVN */
   .topbar {
     padding: 0 14px;
@@ -1803,7 +1948,7 @@ textarea.form-control {
 
   .nav-menu {
     position: fixed;
-    top: 74px;
+    top: 98px; /* Positioned right below frozen topbar + header */
     left: 0;
     right: 0;
     background: #ffffff;
@@ -1844,6 +1989,13 @@ textarea.form-control {
 }
 
 @media (max-width: 560px) {
+  html {
+    scroll-padding-top: 94px;
+  }
+  body {
+    padding-top: 92px; /* Offset for frozen header on mobile */
+  }
+
   /* Exact SSVN Mobile Topbar dimensions */
   .topbar {
     justify-content: space-between;
@@ -1892,5 +2044,23 @@ textarea.form-control {
   .brand-logo-frame {
     width: 44px;
     height: 44px;
+  }
+
+  .nav-menu {
+    top: 92px;
+  }
+
+  .portal-circle-btn {
+    width: 96px;
+    height: 96px;
+  }
+  .circle-btn-sub {
+    font-size: 0.66rem;
+  }
+  .circle-btn-main {
+    font-size: 0.88rem;
+  }
+  .circle-btn-arrow {
+    font-size: 1rem;
   }
 }

@@ -11,19 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. Sticky Header
+   1. Sticky / Frozen Header
    ========================================================================== */
 function initStickyHeader() {
+  const headerWrapper = document.getElementById('site-header-wrapper');
   const header = document.getElementById('site-header');
-  if (!header) return;
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+    const isScrolled = window.scrollY > 30;
+    if (headerWrapper) {
+      headerWrapper.classList.toggle('scrolled', isScrolled);
     }
-  });
+    if (header) {
+      header.classList.toggle('scrolled', isScrolled);
+    }
+  }, { passive: true });
 }
 
 /* ==========================================================================
@@ -35,8 +37,9 @@ function initMobileMenu() {
   if (!menuBtn || !navMenu) return;
 
   menuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-    menuBtn.textContent = navMenu.classList.contains('open') ? '✕' : '☰';
+    const isOpen = navMenu.classList.toggle('open');
+    menuBtn.textContent = isOpen ? '✕' : '☰';
+    document.body.classList.toggle('menu-open', isOpen);
   });
 
   const navLinks = navMenu.querySelectorAll('.nav-link, .btn');
@@ -44,6 +47,7 @@ function initMobileMenu() {
     link.addEventListener('click', () => {
       navMenu.classList.remove('open');
       menuBtn.textContent = '☰';
+      document.body.classList.remove('menu-open');
     });
   });
 }

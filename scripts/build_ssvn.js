@@ -13,41 +13,15 @@ const ssvnHtml = `<!doctype html>
   <link rel="icon" type="image/jpeg" href="./images/logo.jpg" />
   <style>
     ${cssContent}
-    /* Group Navigation Banner */
-    .group-nav-pill {
-      background: #f59e0b;
-      color: #0b1e16 !important;
-      font-weight: 800 !important;
-      border-radius: 9999px !important;
-      padding: 6px 14px !important;
-      font-size: 11px !important;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .group-nav-pill:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(245, 158, 11, 0.5);
-    }
   </style>
 </head>
 <body>
   <div class="app">
     <div class="topbar">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <a class="group-nav-pill" href="../../index.html" target="_top" title="Return to Sri Shirdi Sai Educational Institutions Main Portal">
-          <span>🏛️</span> Main Group Portal
-        </a>
-        <a class="location-line" href="https://www.google.com/maps/search/?api=1&query=Chemudulanka%2C%20Alamuru%20Mandal%2C%20Andhra%20Pradesh" target="_blank" rel="noreferrer" aria-label="Open Chemudulanka, Alamuru Mandal in Google Maps">
-          <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5.2-8 12-8 12S4 15.2 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.7"/></svg>
-          <span>Chemudulanka, Alamuru Mandal, Andhra Pradesh</span>
-        </a>
-      </div>
+      <a class="location-line" href="https://www.google.com/maps/search/?api=1&query=Chemudulanka%2C%20Alamuru%20Mandal%2C%20Andhra%20Pradesh" target="_blank" rel="noreferrer" aria-label="Open Chemudulanka, Alamuru Mandal in Google Maps">
+        <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5.2-8 12-8 12S4 15.2 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.7"/></svg>
+        <span>Chemudulanka, Alamuru Mandal, Andhra Pradesh</span>
+      </a>
       <div class="social-links">
         <a class="facebook-link" href="https://www.facebook.com/ssvn02/" target="_blank" rel="noreferrer" aria-label="Visit us on Facebook" title="Facebook">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.2 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.3H9.4V13h2.7v8h3.1Z"/></svg>
