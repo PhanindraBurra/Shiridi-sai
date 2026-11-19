@@ -16,3 +16,4 @@ files.forEach(file => {
   }
 });
 console.log('Done fixing relative asset paths in JSX components.');
+
