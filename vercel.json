@@ -1,0 +1,25 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/school",
+      "destination": "/SSVN-web-main/dist/index.html"
+    },
+    {
+      "source": "/school/:match*",
+      "destination": "/SSVN-web-main/dist/:match*"
+    },
+    {
+      "source": "/college",
+      "destination": "/eswara vidyalayam/dist/index.html"
+    },
+    {
+      "source": "/eswara-vidyalayam",
+      "destination": "/eswara vidyalayam/dist/index.html"
+    },
+    {
+      "source": "/college/:match*",
+      "destination": "/eswara vidyalayam/dist/:match*"
+    }
+  ]
+}

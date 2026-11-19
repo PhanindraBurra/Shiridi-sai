@@ -117,12 +117,12 @@ export default function Navbar({ activeSection, setActiveSection, onOpenIntro, o
             className="flex items-center gap-2.5 sm:gap-3.5 cursor-pointer group shrink-0"
           >
             <img
-              src="/assets/eswar_badge.png"
+              src="./assets/eswar_badge.png"
               alt="Eswara Vidyalayam Logo"
               className="h-11 w-11 sm:h-12 sm:w-12 lg:h-13 lg:w-13 xl:h-14 xl:w-14 rounded-full object-contain bg-white border-2 border-[#e11d48] shadow-md group-hover:scale-105 transition-transform shrink-0"
               onError={(e) => {
                 e.target.onerror = null;
-                e.target.src = '/assets/eswar_logo.png';
+                e.target.src = './assets/eswar_logo.png';
               }}
             />
 

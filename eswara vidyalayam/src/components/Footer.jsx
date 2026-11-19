@@ -25,7 +25,7 @@ export default function Footer({ onOpenDisclosure, onOpenIntro, onNavigate }) {
           <div className="space-y-3.5">
             <div className="flex items-center gap-3">
               <img 
-                src="/assets/eswar_badge.png" 
+                src="./assets/eswar_badge.png" 
                 alt="Eswara Vidyalayam Logo" 
                 className="h-14 w-14 rounded-full object-contain bg-white border-2 border-[#e11d48] p-0.5 shadow-md"
               />

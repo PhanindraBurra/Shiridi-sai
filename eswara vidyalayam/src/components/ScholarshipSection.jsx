@@ -226,7 +226,7 @@ export default function ScholarshipSection() {
               </p>
               <div className="rounded-2xl overflow-hidden border border-slate-200 cursor-pointer" onClick={() => setShowPosterModal(true)}>
                 <img
-                  src="/assets/ev_scholarship_poster.jpg"
+                  src="./assets/ev_scholarship_poster.jpg"
                   alt="Scholarship Poster"
                   className="w-full h-52 object-cover object-top hover:scale-105 transition duration-300"
                 />
@@ -262,7 +262,7 @@ export default function ScholarshipSection() {
               </button>
               <div className="max-h-[85vh] overflow-y-auto rounded-2xl">
                 <img
-                  src="/assets/ev_scholarship_poster.jpg"
+                  src="./assets/ev_scholarship_poster.jpg"
                   alt="Eswara Vidyalayam ₹1 Crore Scholarship Poster"
                   className="w-full h-auto object-contain"
                 />

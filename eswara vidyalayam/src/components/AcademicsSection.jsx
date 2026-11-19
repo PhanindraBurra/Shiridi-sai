@@ -8,7 +8,7 @@ const STREAMS = [
     title: 'BiPC (Medical Stream)',
     subtitle: 'Integrated NEET & Medical Entrances',
     badge: 'Pre-Medical',
-    image: '/assets/ev_botany_lab.jpg',
+    image: './assets/ev_botany_lab.jpg',
     desc: 'Combines Intermediate syllabus with exhaustive NEET coaching. Practical learning in botany specimen research, animal histology, and chemical titrations.',
     highlights: [
       'NEET Intensive Mock Tests & DPPs',
@@ -22,7 +22,7 @@ const STREAMS = [
     title: 'MPC (Engineering Stream)',
     subtitle: 'Integrated IIT-JEE (Mains & Advanced) • AP-EAPCET',
     badge: 'IIT & Engineering',
-    image: '/assets/ev_physics_lab.jpg',
+    image: './assets/ev_physics_lab.jpg',
     desc: 'Focused problem-solving in Mathematics, advanced Physics mechanics and optics, and high-scoring Chemistry techniques for IITs and NITs.',
     highlights: [
       'IIT-JEE Integrated Curriculum',
@@ -36,7 +36,7 @@ const STREAMS = [
     title: 'Humanities & Commerce (CEC / MEC)',
     subtitle: 'Integrated CIVILS (UPSC/APPSC) • CLAT • CUET',
     badge: 'Civils & Law',
-    image: '/assets/ev_studyhall_navy.jpg',
+    image: './assets/ev_studyhall_navy.jpg',
     desc: 'Designed for young women targeting Civil Services (IAS/IPS), National Law Universities (CLAT/LAWCET), and Central Universities.',
     highlights: [
       'UPSC Civils General Studies Foundation',

@@ -4,7 +4,7 @@ import { Sparkles, Play, ArrowRight, ShieldCheck, Award, BookOpen, GraduationCap
 
 const INTRO_SLIDES = [
   {
-    image: '/assets/ev_transport_buses.jpg',
+    image: './assets/ev_transport_buses.jpg',
     title: 'Eswara Vidyalayam Junior College for Women',
     subtitle: 'Under Sri Shirdi Sai Educational Institutions • NH-16 Chemudulanka',
     motto: 'Exclusively for Women... Exceptionally For Excellence',
@@ -12,7 +12,7 @@ const INTRO_SLIDES = [
     tag: 'Established Institutions'
   },
   {
-    image: '/assets/ev_achievers_2026.jpg',
+    image: './assets/ev_achievers_2026.jpg',
     title: 'Andhra Pradesh State Rankers in IPE 2026',
     subtitle: 'Historic Scores: 989/1000 in BiPC & MPC • Top Ranks in AP-LAWCET & CUET',
     motto: 'Guided by Purpose, Vision and Dreams... We Transform!',
@@ -20,7 +20,7 @@ const INTRO_SLIDES = [
     tag: '989/1000 State Rank'
   },
   {
-    image: '/assets/ev_physics_lab.jpg',
+    image: './assets/ev_physics_lab.jpg',
     title: 'Advanced Science & Digital Laboratories',
     subtitle: 'Precision Optical Benches, Chemistry Titrations & Botany Specimens',
     motto: 'Hands-on practical exploration with specialized faculty mentors',
@@ -28,7 +28,7 @@ const INTRO_SLIDES = [
     tag: 'World-Class Labs'
   },
   {
-    image: '/assets/ev_scholarship_poster.jpg',
+    image: './assets/ev_scholarship_poster.jpg',
     title: '₹1 Crore Star Scholarship Program',
     subtitle: 'Unlocking potential with up to 100% scholarships for 10th-grade girls',
     motto: 'Earn your scholarship, shape your future...!',
@@ -36,7 +36,7 @@ const INTRO_SLIDES = [
     tag: '₹1 Crore Fund'
   },
   {
-    image: '/assets/ev_yoga_wellness.jpg',
+    image: './assets/ev_yoga_wellness.jpg',
     title: 'Mindful Wellness, Yoga & Safe Campus Life',
     subtitle: 'Daily morning yoga on manicured green lawns and vibrant cultural celebrations',
     motto: 'Empowering young women to lead the nation fearlessly',
@@ -128,7 +128,7 @@ export default function IntroModal({ isOpen, onClose }) {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <img
-                  src="/assets/eswar_badge.png"
+                  src="./assets/eswar_badge.png"
                   alt="Eswara Vidyalayam Logo"
                   className="w-8 h-8 rounded-full bg-white border border-rose-500/50 p-0.5 object-contain"
                 />

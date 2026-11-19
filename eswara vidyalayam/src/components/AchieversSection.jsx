@@ -210,7 +210,7 @@ export default function AchieversSection() {
               </button>
               <div className="max-h-[85vh] overflow-y-auto rounded-2xl">
                 <img
-                  src="/assets/ev_achievers_2026.jpg"
+                  src="./assets/ev_achievers_2026.jpg"
                   alt="Eswara Vidyalayam 2026 Achievers Official Poster"
                   className="w-full h-auto object-contain"
                 />

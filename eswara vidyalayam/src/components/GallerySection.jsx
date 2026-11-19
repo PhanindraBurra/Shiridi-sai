@@ -3,21 +3,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, Maximize2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const GALLERY_ITEMS = [
-  { id: 1, src: '/assets/ev_campus_building.jpg', title: 'Main Campus Building', category: 'Campus & Fleet' },
-  { id: 2, src: '/assets/ev_transport_buses.jpg', title: 'College Bus Fleet', category: 'Campus & Fleet' },
-  { id: 3, src: '/assets/ev_physics_lab.jpg', title: 'Physics Research Lab', category: 'Laboratories' },
-  { id: 4, src: '/assets/ev_botany_lab.jpg', title: 'Botany & Specimen Lab', category: 'Laboratories' },
-  { id: 5, src: '/assets/ev_chemistry_lab_2.jpg', title: 'Chemistry Titration Lab', category: 'Laboratories' },
-  { id: 6, src: '/assets/ev_chemistry_lab_1.jpg', title: 'Chemistry Solutions', category: 'Laboratories' },
-  { id: 7, src: '/assets/ev_biology_microscope.jpg', title: 'Microscopy Examination', category: 'Laboratories' },
-  { id: 8, src: '/assets/ev_computer_lab.jpg', title: 'Digital Computer Lab', category: 'Digital & Library' },
-  { id: 9, src: '/assets/ev_library_reading.jpg', title: 'Central Library', category: 'Digital & Library' },
-  { id: 10, src: '/assets/ev_studyhall_navy.jpg', title: 'Supervised Study Hall', category: 'Classrooms' },
-  { id: 11, src: '/assets/ev_classroom_green.jpg', title: 'Classroom Session', category: 'Classrooms' },
-  { id: 12, src: '/assets/ev_yoga_wellness.jpg', title: 'Lawn Yoga & Wellness', category: 'Culture & Wellness' },
-  { id: 13, src: '/assets/ev_cultural_fest.jpg', title: 'Dasara Utsav Celebration', category: 'Culture & Wellness' },
-  { id: 14, src: '/assets/ev_microscopy_lab.jpg', title: 'Biological Analysis', category: 'Laboratories' },
-  { id: 15, src: '/assets/ev_achievers_2026.jpg', title: 'State Rankers 2026', category: 'Campus & Fleet' }
+  { id: 1, src: './assets/ev_campus_building.jpg', title: 'Main Campus Building', category: 'Campus & Fleet' },
+  { id: 2, src: './assets/ev_transport_buses.jpg', title: 'College Bus Fleet', category: 'Campus & Fleet' },
+  { id: 3, src: './assets/ev_physics_lab.jpg', title: 'Physics Research Lab', category: 'Laboratories' },
+  { id: 4, src: './assets/ev_botany_lab.jpg', title: 'Botany & Specimen Lab', category: 'Laboratories' },
+  { id: 5, src: './assets/ev_chemistry_lab_2.jpg', title: 'Chemistry Titration Lab', category: 'Laboratories' },
+  { id: 6, src: './assets/ev_chemistry_lab_1.jpg', title: 'Chemistry Solutions', category: 'Laboratories' },
+  { id: 7, src: './assets/ev_biology_microscope.jpg', title: 'Microscopy Examination', category: 'Laboratories' },
+  { id: 8, src: './assets/ev_computer_lab.jpg', title: 'Digital Computer Lab', category: 'Digital & Library' },
+  { id: 9, src: './assets/ev_library_reading.jpg', title: 'Central Library', category: 'Digital & Library' },
+  { id: 10, src: './assets/ev_studyhall_navy.jpg', title: 'Supervised Study Hall', category: 'Classrooms' },
+  { id: 11, src: './assets/ev_classroom_green.jpg', title: 'Classroom Session', category: 'Classrooms' },
+  { id: 12, src: './assets/ev_yoga_wellness.jpg', title: 'Lawn Yoga & Wellness', category: 'Culture & Wellness' },
+  { id: 13, src: './assets/ev_cultural_fest.jpg', title: 'Dasara Utsav Celebration', category: 'Culture & Wellness' },
+  { id: 14, src: './assets/ev_microscopy_lab.jpg', title: 'Biological Analysis', category: 'Laboratories' },
+  { id: 15, src: './assets/ev_achievers_2026.jpg', title: 'State Rankers 2026', category: 'Campus & Fleet' }
 ];
 
 export default function GallerySection() {

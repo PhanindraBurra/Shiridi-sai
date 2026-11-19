@@ -26,6 +26,10 @@ const server = http.createServer((req, res) => {
   let reqUrl = decodeURI(req.url.split('?')[0]);
   if (reqUrl === '/' || reqUrl === '') {
     reqUrl = '/index.html';
+  } else if (reqUrl === '/college' || reqUrl === '/college/' || reqUrl === '/eswara-vidyalayam' || reqUrl === '/eswara-vidyalayam/') {
+    reqUrl = '/eswara vidyalayam/dist/index.html';
+  } else if (reqUrl === '/school' || reqUrl === '/school/') {
+    reqUrl = '/SSVN-web-main/dist/index.html';
   }
 
   let filePath = path.join(ROOT, reqUrl);
@@ -35,10 +39,17 @@ const server = http.createServer((req, res) => {
     filePath = path.join(filePath, 'index.html');
   }
 
+  // Fallback checks
   if (!fs.existsSync(filePath)) {
-    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
-    res.end('404 Not Found: ' + reqUrl);
-    return;
+    // Check in eswara vidyalayam/dist
+    const evPath = path.join(ROOT, 'eswara vidyalayam', 'dist', reqUrl);
+    if (fs.existsSync(evPath) && !fs.statSync(evPath).isDirectory()) {
+      filePath = evPath;
+    } else {
+      res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+      res.end('404 Not Found: ' + reqUrl);
+      return;
+    }
   }
 
   const ext = path.extname(filePath).toLowerCase();

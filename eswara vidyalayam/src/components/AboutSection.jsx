@@ -88,7 +88,7 @@ export default function AboutSection() {
               <div className="lg:col-span-6">
                 <div className="rounded-3xl overflow-hidden border-2 border-slate-200 shadow-xl group">
                   <img
-                    src="/assets/ev_campus_building.jpg"
+                    src="./assets/ev_campus_building.jpg"
                     alt="Eswara Vidyalayam Campus Building"
                     className="w-full h-72 sm:h-84 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -203,7 +203,7 @@ export default function AboutSection() {
               <div className="lg:col-span-6">
                 <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
                   <img
-                    src="/assets/ev_transport_buses.jpg"
+                    src="./assets/ev_transport_buses.jpg"
                     alt="Eswara Vidyalayam Transport Buses"
                     className="w-full h-72 sm:h-84 object-cover"
                   />

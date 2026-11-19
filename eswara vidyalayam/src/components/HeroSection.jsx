@@ -4,35 +4,35 @@ import { Sparkles, ArrowRight, Award, ShieldCheck, ChevronLeft, ChevronRight, Se
 
 const HERO_SLIDES = [
   {
-    image: '/assets/ev_transport_buses.jpg',
+    image: './assets/ev_transport_buses.jpg',
     title: 'Exclusively for Women... Exceptionally For Excellence',
     subtitle: 'Premier Day-cum-Residential Junior College on NH-16 Chemudulanka with Civils, IIT, NEET & CLAT Orientation.',
     badge: 'Day-cum-Residential • NH-16 Campus',
     highlight: 'Sri Shirdi Sai Educational Institutions'
   },
   {
-    image: '/assets/ev_physics_lab.jpg',
+    image: './assets/ev_physics_lab.jpg',
     title: 'Advanced Science & Digital Laboratories',
     subtitle: 'Equipped with precision optical benches, analytical titration units, botany specimen chambers & computer lab.',
     badge: 'State-of-the-Art Labs',
     highlight: 'Advanced Instrumentation'
   },
   {
-    image: '/assets/ev_achievers_2026.jpg',
+    image: './assets/ev_achievers_2026.jpg',
     title: 'Andhra Pradesh State Rankers in IPE 2026',
     subtitle: 'Historic scores: 989/1000, 988/1000, 986/1000 in BiPC & MPC, and Top Ranks in AP-LAWCET & CUET.',
     badge: '989/1000 Top State Rank',
     highlight: 'Consistent Rankers'
   },
   {
-    image: '/assets/ev_scholarship_poster.jpg',
+    image: './assets/ev_scholarship_poster.jpg',
     title: '₹1 Crore Star Scholarship Program',
     subtitle: 'Up to 100% merit scholarship for 10th-grade girl students entering Intermediate education.',
     badge: '₹1 Crore Scholarship Fund',
     highlight: 'Merit-Based Awards'
   },
   {
-    image: '/assets/ev_yoga_wellness.jpg',
+    image: './assets/ev_yoga_wellness.jpg',
     title: 'Mindful Wellness, Yoga & Safe Campus Life',
     subtitle: 'Daily morning lawn yoga, dedicated bus fleet, and 24/7 monitored safe residential hostel.',
     badge: 'Holistic Campus Life',
