@@ -4,6 +4,7 @@ node_modules/
 
 # Local logs and temp
 *.log
+*.zip
 .DS_Store
 Thumbs.db
 

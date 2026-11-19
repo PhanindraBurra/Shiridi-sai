@@ -1185,159 +1185,84 @@ button {
   box-shadow: 0 25px 60px rgba(217, 37, 52, 0.25);
 }
 
-/* Animation Stage */
-.anim-stage {
-  position: relative;
-  height: 190px;
-  border-radius: 18px;
-  background: rgba(0, 0, 0, 0.25);
-  margin-bottom: 24px;
-  overflow: hidden;
+/* Official Institution Brand Logo Showcase (Replaced cartoon animations) */
+.portal-brand-showcase {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 22px;
+  gap: 14px;
+  text-align: center;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-smooth);
 }
 
-/* School Animations */
-.school-floating-plane {
-  position: absolute;
-  top: 22px;
-  left: 20px;
-  animation: plane-glide 6s ease-in-out infinite;
-  filter: drop-shadow(0 4px 10px rgba(245, 158, 11, 0.4));
+.portal-card:hover .portal-brand-showcase {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
-.school-backpack-anim {
-  position: absolute;
-  bottom: 18px;
-  left: 28px;
-  animation: bounce-float 3.5s ease-in-out infinite;
-}
-
-.school-trophy-anim {
-  position: absolute;
-  top: 18px;
-  right: 30px;
-  animation: trophy-sparkle 3s ease-in-out infinite;
-}
-
-.school-orbit-element {
-  position: absolute;
-  width: 130px;
-  height: 130px;
+.portal-logo-ring {
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
-  border: 1px dashed rgba(245, 158, 11, 0.4);
-  animation: rotate-slow 15s linear infinite;
+  padding: 4px;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.school-orbit-icon {
-  position: absolute;
-  top: -12px;
-  width: 26px;
-  height: 26px;
+.portal-card:hover .portal-logo-ring {
+  transform: scale(1.08);
+}
+
+.school-logo-ring {
+  border: 3.5px solid var(--gold);
+  box-shadow: 0 10px 28px rgba(245, 158, 11, 0.45);
+}
+
+.college-logo-ring {
+  border: 3.5px solid var(--crimson);
+  box-shadow: 0 10px 28px rgba(217, 37, 52, 0.45);
+}
+
+.portal-inst-logo {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  background: #f59e0b;
-  color: #0b1a30;
+  object-fit: cover;
+  background: #ffffff;
+}
+
+.portal-brand-titles {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
+  gap: 4px;
+}
+
+.portal-inst-name {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
   font-weight: 900;
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
-}
-
-.school-center-hero-badge {
-  text-align: center;
-  z-index: 2;
-}
-
-.school-center-hero-badge .school-badge-icon {
-  font-size: 2.8rem;
-  display: block;
-  animation: pulse-grow 2.5s ease-in-out infinite;
-}
-
-.school-center-hero-badge span {
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: #fef08a;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-/* College Animations */
-.college-mortarboard-anim {
-  position: absolute;
-  top: 22px;
-  left: 28px;
-  animation: cap-toss 4.5s ease-in-out infinite;
-  filter: drop-shadow(0 4px 12px rgba(217, 37, 52, 0.4));
-}
-
-.college-laurel-anim {
-  position: absolute;
-  top: 22px;
-  right: 28px;
-  animation: laurel-pulse 3s ease-in-out infinite;
-}
-
-.college-dna-anim {
-  position: absolute;
-  bottom: 18px;
-  right: 30px;
-  animation: dna-wiggle 4s ease-in-out infinite;
-}
-
-.college-shield-center {
-  text-align: center;
-  z-index: 2;
-}
-
-.college-shield-center .college-emblem-icon {
-  font-size: 3rem;
-  display: block;
-  animation: pulse-grow 2.5s ease-in-out infinite;
-  animation-delay: 1.2s;
-}
-
-.college-shield-center span {
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: #fecdd3;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.college-glowing-ring {
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 1px dashed rgba(217, 37, 52, 0.4);
-  animation: rotate-reverse 15s linear infinite;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.college-ring-planet {
-  position: absolute;
-  bottom: -12px;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--crimson);
+  letter-spacing: 0.04em;
   color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 900;
-  box-shadow: 0 0 14px rgba(217, 37, 52, 0.8);
+}
+
+.portal-inst-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cbd5e1;
 }
 
 .portal-header-info {
@@ -1703,34 +1628,149 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   Floating WhatsApp Button (Matching SSVN Style)
+   Campus Map Showcase (100% Responsive & Mobile-Perfect)
    ========================================================================== */
-.whatsapp-float {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  z-index: 50;
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  box-shadow: 0 8px 24px rgba(16, 44, 35, 0.4);
-  text-decoration: none;
-  transition: transform .2s ease, box-shadow .2s ease;
+.campus-map-container {
+  margin-top: 50px;
+  width: 100%;
 }
 
-.whatsapp-float svg {
-  width: 34px;
-  height: 34px;
+.campus-map-card {
+  background: #ffffff;
+  border-radius: 26px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.map-card-header {
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  flex-wrap: wrap;
+  background: #f8fafc;
+}
+
+.map-header-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(217, 37, 52, 0.1);
+  color: var(--crimson);
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.map-header-text {
+  flex: 1;
+  min-width: 240px;
+}
+
+.map-header-text h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+
+.map-header-text p {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.map-directions-btn {
+  flex-shrink: 0;
+}
+
+.map-frame-wrapper {
+  width: 100%;
+  height: 380px;
+  background: #e2e8f0;
+  position: relative;
+}
+
+.map-frame-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ==========================================================================
+   Mobile & Desktop Floating Quick-Action Dock
+   (WhatsApp, Instagram & Call Helpline Floating While Scrolling)
+   ========================================================================== */
+.mobile-floating-dock {
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+}
+
+.m-float-action {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.28);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.m-float-action:hover,
+.m-float-action:active {
+  transform: scale(1.12);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.4);
+}
+
+.float-whatsapp {
+  background: #25d366;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+.float-whatsapp svg {
+  width: 30px;
+  height: 30px;
   fill: currentColor;
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 30px rgba(16, 44, 35, 0.5);
+.float-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  box-shadow: 0 8px 24px rgba(220, 39, 67, 0.45);
+}
+
+.float-instagram svg {
+  width: 24px;
+  height: 24px;
+}
+
+.float-call {
+  background: linear-gradient(135deg, #0f2c59 0%, #1e3a8a 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(15, 44, 89, 0.45);
+}
+
+.float-call svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Legacy fallback */
+.whatsapp-float {
+  display: none;
 }
 
 /* ==========================================================================
@@ -2229,5 +2269,46 @@ textarea.form-control {
   }
   .circle-btn-arrow {
     font-size: 1rem;
+  }
+
+  /* Mobile Map adjustments */
+  .campus-map-card {
+    border-radius: 20px;
+  }
+  .map-card-header {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .map-directions-btn {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+  .map-frame-wrapper {
+    height: 290px;
+  }
+
+  /* Mobile Floating Quick-Action Dock */
+  .mobile-floating-dock {
+    right: 12px;
+    bottom: 14px;
+    gap: 9px;
+  }
+  .m-float-action {
+    width: 46px;
+    height: 46px;
+  }
+  .float-whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+  .float-instagram svg {
+    width: 21px;
+    height: 21px;
+  }
+  .float-call svg {
+    width: 20px;
+    height: 20px;
   }
 }

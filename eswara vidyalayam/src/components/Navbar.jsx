@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, MapPin, Play, FileText, GraduationCap, ChevronRight } from 'lucide-react';
 
-export default function Navbar({ activeSection, setActiveSection, onOpenIntro, onOpenDisclosure }) {
+export default function Navbar({ activeSection, setActiveSection, onOpenIntro, onOpenDisclosure, onOpenFeedback }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -50,8 +50,18 @@ export default function Navbar({ activeSection, setActiveSection, onOpenIntro, o
             <span className="truncate">Chemudulanka, Alamuru Mandal, Andhra Pradesh</span>
           </a>
 
-          {/* Social Links on Right (Visible on Mobile & Desktop, matching SSVN) */}
+          {/* Highlighted Feedback Desk & Social Links */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* Highlighted Feedback Button in Top Bar */}
+            <button
+              onClick={onOpenFeedback}
+              className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-[10px] sm:text-[11px] shadow-sm hover:scale-105 active:scale-95 transition-all cursor-pointer"
+              title="Share Student / Parent Feedback"
+            >
+              <span className="animate-pulse">💬</span>
+              <span>Feedback</span>
+            </button>
+
             <a
               href="https://www.facebook.com/ssvn02/"
               target="_blank"
@@ -145,8 +155,16 @@ export default function Navbar({ activeSection, setActiveSection, onOpenIntro, o
             ))}
           </div>
 
-          {/* Desktop CTA Button - Properly bounded inside navbar */}
-          <div className="hidden lg:flex items-center shrink-0">
+          {/* Desktop CTA & Feedback Buttons - Properly bounded inside navbar */}
+          <div className="hidden lg:flex items-center gap-2.5 shrink-0">
+            <button
+              onClick={onOpenFeedback}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-black bg-amber-50 hover:bg-amber-100 text-amber-950 border border-amber-300 shadow-sm hover:scale-105 active:scale-95 transition-all whitespace-nowrap cursor-pointer"
+              title="Give Feedback"
+            >
+              <span>💬 Feedback</span>
+            </button>
+
             <button
               onClick={() => scrollToSection('admissions')}
               className="inline-flex items-center gap-1.5 px-4 xl:px-5 py-2 xl:py-2.5 rounded-full text-xs xl:text-sm font-black bg-[#e11d48] hover:bg-[#be123c] text-white shadow-md shadow-rose-600/30 hover:shadow-lg hover:scale-105 active:scale-95 transition-all whitespace-nowrap"
@@ -156,17 +174,23 @@ export default function Navbar({ activeSection, setActiveSection, onOpenIntro, o
             </button>
           </div>
 
-          {/* Mobile Menu Hamburger & Apply */}
-          <div className="flex lg:hidden items-center gap-2 shrink-0">
+          {/* Mobile Menu Hamburger, Feedback & Apply */}
+          <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
+            <button
+              onClick={onOpenFeedback}
+              className="px-2.5 py-1.5 rounded-full text-[11px] font-black bg-amber-400 text-slate-950 shadow-sm flex items-center gap-1"
+            >
+              <span>💬 Feedback</span>
+            </button>
             <button
               onClick={() => scrollToSection('admissions')}
-              className="px-3.5 py-1.5 rounded-full text-xs font-black bg-[#e11d48] text-white shadow-sm"
+              className="px-3 py-1.5 rounded-full text-xs font-black bg-[#e11d48] text-white shadow-sm"
             >
               Apply
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 sm:p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 hover:bg-slate-200 active:scale-95 transition"
+              className="p-1.5 sm:p-2 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 hover:bg-slate-200 active:scale-95 transition"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5 text-[#e11d48]" /> : <Menu className="w-5 h-5" />}
@@ -195,6 +219,15 @@ export default function Navbar({ activeSection, setActiveSection, onOpenIntro, o
           </div>
 
           <div className="flex flex-col gap-2.5 pt-1">
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenFeedback();
+              }}
+              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-sm shadow-md flex items-center justify-center gap-2 active:scale-95 transition"
+            >
+              <span>💬 Give Student / Parent Feedback</span>
+            </button>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);

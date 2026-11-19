@@ -204,7 +204,7 @@ export default function ContactSection() {
                 <span className="text-xs sm:text-sm font-bold text-[#0f2c59]">NH-16 Highway, Chemudulanka, Alamuru Mandal</span>
               </div>
               <a
-                href="https://maps.google.com/?q=Chemudulanka+Alamuru+Mandal+NH16"
+                href="https://maps.google.com/?q=Sri+Shirdi+Sai+Vidya+Niketan+Chemudulanka"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs sm:text-sm text-[#e11d48] font-black hover:underline"
@@ -214,6 +214,43 @@ export default function ContactSection() {
             </div>
           </div>
 
+        </div>
+
+        {/* Responsive Chemudulanka Campus Google Map Embed */}
+        <div className="mt-10 rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-white">
+          <div className="p-4 sm:p-6 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-rose-100 text-[#e11d48] flex items-center justify-center shrink-0">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="text-base sm:text-lg font-black text-[#0f2c59]">
+                  Eswara Vidyalayam Junior College — Campus Map & Directions
+                </h4>
+                <p className="text-xs sm:text-sm text-slate-500 font-medium">
+                  NH-16 Highway, Chemudulanka, Alamuru Mandal, Dr. B.R. Ambedkar Konaseema Dist, AP — 533232
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://maps.google.com/?q=Sri+Shirdi+Sai+Vidya+Niketan+Chemudulanka"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2.5 rounded-xl bg-[#e11d48] text-white font-bold text-xs hover:bg-[#be123c] shadow-sm transition shrink-0"
+            >
+              Open in Google Maps ↗
+            </a>
+          </div>
+          <div className="w-full h-80 sm:h-96">
+            <iframe
+              src="https://maps.google.com/maps?q=Sri%20Shirdi%20Sai%20Vidya%20Niketan%20Chemudulanka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className="w-full h-full border-0"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Eswara Vidyalayam Junior College Chemudulanka Campus Location Map"
+            />
+          </div>
         </div>
 
       </div>

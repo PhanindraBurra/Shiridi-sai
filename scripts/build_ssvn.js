@@ -192,6 +192,32 @@ const ssvnHtml = `<!doctype html>
             </div>
           </div>
         </div>
+        <div class="campus-map-card" style="grid-column: 1 / -1; margin-top: 10px; background: #ffffff; border-radius: 24px; border: 1px solid rgba(15,23,42,0.08); box-shadow: 0 10px 30px rgba(16,44,35,0.08); overflow: hidden;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 14px 22px; border-bottom: 1px solid rgba(15,23,42,0.08); background: #fbfdfc; flex-wrap: wrap; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 1.3rem;">📍</span>
+              <div>
+                <strong style="display: block; font-size: 0.95rem; color: #102c23; font-weight: 700;">Chemudulanka Campus Map</strong>
+                <span style="font-size: 0.78rem; color: #69736e;">NH-16, Alamuru Mandal, Dr. B.R. Ambedkar Konaseema Dt.</span>
+              </div>
+            </div>
+            <a href="https://maps.google.com/maps?q=Sri+Shirdi+Sai+Vidya+Niketan+Chemudulanka" target="_blank" rel="noreferrer" style="font-size: 0.8rem; font-weight: 700; color: #164f3b; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; padding: 7px 16px; background: rgba(22,79,59,0.08); border-radius: 999px;">
+              Open in Google Maps ↗
+            </a>
+          </div>
+          <div style="position: relative; width: 100%; height: 340px; background: #e9efe3;">
+            <iframe
+              title="Sri Shirdi Sai Vidya Niketan Campus Map"
+              src="https://maps.google.com/maps?q=Sri%20Shirdi%20Sai%20Vidya%20Niketan%20Chemudulanka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style="border: 0; display: block;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -209,9 +235,20 @@ const ssvnHtml = `<!doctype html>
       <small>© 2026 Sri Shirdi Sai Vidya Niketan. Chemudulanka, Alamuru Mandal.</small>
     </footer>
 
-    <a class="whatsapp-float" id="wa-float" href="https://wa.me/919491415244" target="_blank" rel="noreferrer" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.4 28.7l6.5-1.7A12.8 12.8 0 1 0 16 3.2Zm0 23.2c-2 0-4-.5-5.7-1.6l-.4-.2-3.8 1 1-3.7-.3-.4A10.2 10.2 0 1 1 16 26.4Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.4 8.4 0 0 1-2.5-1.6 9.4 9.4 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.5.3-.5c.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4 0-.1-.2-.2-.5-.4Z"/></svg>
-    </a>
+    <aside class="mobile-floating-dock" id="mobile-dock" aria-label="Quick Connect Actions">
+      <a class="dock-action call" href="tel:+919491415244" aria-label="Call Office" title="Call Office">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="dock-tooltip">Call Us</span>
+      </a>
+      <a class="dock-action insta" href="https://www.instagram.com/srishirdisaividyaniketan/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram Profile" title="Follow on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        <span class="dock-tooltip">Instagram</span>
+      </a>
+      <a class="dock-action wa" href="https://wa.me/919491415244" target="_blank" rel="noreferrer" aria-label="WhatsApp Chat" title="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.4 28.7l6.5-1.7A12.8 12.8 0 1 0 16 3.2Zm0 23.2c-2 0-4-.5-5.7-1.6l-.4-.2-3.8 1 1-3.7-.3-.4A10.2 10.2 0 1 1 16 26.4Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.4 8.4 0 0 1-2.5-1.6 9.4 9.4 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.5.3-.5c.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4 0-.1-.2-.2-.5-.4Z"/></svg>
+        <span class="dock-tooltip">WhatsApp</span>
+      </a>
+    </aside>
 
     <!-- Lightbox Modal -->
     <div id="lightbox-modal" class="lightbox" style="display:none;" onclick="closeLightbox()">
@@ -330,18 +367,18 @@ const ssvnHtml = `<!doctype html>
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Scroll header & WhatsApp bottom adjustment
+    // Scroll header & Quick actions dock adjustment
     window.addEventListener('scroll', () => {
       const header = document.getElementById('main-header');
       if (window.scrollY > 30) header.classList.add('scrolled');
       else header.classList.remove('scrolled');
 
       const footer = document.getElementById('site-footer');
-      const waFloat = document.getElementById('wa-float');
-      if (footer && waFloat) {
+      const dock = document.getElementById('mobile-dock');
+      if (footer && dock) {
         const footerTop = footer.getBoundingClientRect().top;
         const bottomOffset = Math.max(24, window.innerHeight - footerTop + 20);
-        waFloat.style.bottom = bottomOffset + 'px';
+        dock.style.bottom = bottomOffset + 'px';
       }
     });
   </script>
